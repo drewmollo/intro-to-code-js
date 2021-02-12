@@ -168,14 +168,12 @@ describe("01 - Values and Types", () => {
       expect(myDetails).to.be.a("string");
     });
 
-    const myDetailsSplit = myDetails.split(" ");
-
     it("myDetails features the value of myFirstName", () => {
-      expect(myDetailsSplit).to.include(`${myFirstName}`);
+      expect(myDetails.split(" ")).to.include(`${myFirstName}`);
     });
 
     it("myDetails features the value of myAge", () => {
-      expect(myDetailsSplit).to.include(`${myAge}`);
+      expect(myDetails.split(" ")).to.include(`${myAge}`);
     });
   });
 });
