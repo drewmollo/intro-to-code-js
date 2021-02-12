@@ -32,7 +32,7 @@
  * Define the variable numB. Assign it the value 3.
  *
  * Define the variable addedTo. Assign it the expression (don't solve) of numA being added to numB.
- * Define the variable subtractedFrom. Assign it the expression (don't solve) of numB being subtracted from numA.
+ * Define the variable subtractedBy. Assign it the expression (don't solve) of numA subtracted by numB.
  * Define the variable multipliedBy. Assign it the expression (don't solve) of numA being multiplied by numB.
  * Define the variable dividedBy. Assign it the expression (don't solve) of numA being divided by numB.
  * Define the variable moduloOf. Assign it the expression (don't solve) of numA being added to numB.
@@ -46,6 +46,12 @@
 // Replace this comment with your code.
 let numA = 15;
 let numB = 3;
+
+let addedTo = numA + numB;
+let subtractedBy = numA - numB;
+let multipliedBy = numA * numB;
+let dividedBy = numA / numB;
+let moduloOf = numA % numB;
 
 /**********************************
  * 5. Numbers and Words, all together
@@ -114,8 +120,20 @@ describe("01 - Values and Types", () => {
     });
 
     describe("Math operations", () => {
-      it("subtractedFrom -> expression equals 12", () => {
-        expect(subtractedFrom).to.equal(12);
+      it("addedTo -> expression assignment evaluates to 18", () => {
+        expect(addedTo).to.equal(18);
+      });
+      it("subtractedBy -> expression assignment evaluates to 12", () => {
+        expect(subtractedBy).to.equal(12);
+      });
+      it("multipliedBy -> expression assignment evaluates to 45", () => {
+        expect(multipliedBy).to.equal(45);
+      });
+      it("dividedBy -> expression assignment evaluates to 5", () => {
+        expect(dividedBy).to.equal(5);
+      });
+      it("moduloOf -> expression assignment evaluates to 0", () => {
+        expect(moduloOf).to.equal(0);
       });
     });
   });
