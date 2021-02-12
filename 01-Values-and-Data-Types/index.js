@@ -8,7 +8,7 @@
 // Replace this comment with your code.
 
 /**********************************
- * 2. What's your age?
+ * #2: What's your age?
  *
  * Define the variable myAge.
  * Assign it the value of your age.
@@ -17,7 +17,7 @@
 // Replace this comment with your code.
 
 /**********************************
- * 3. In fact, it's super fun.
+ * #3: In fact, it's super fun.
  *
  * Define the variable codingIsFun and assign it a boolean value.
  * There's only one right answer here.
@@ -26,7 +26,19 @@
 // Replace this comment with your code.
 
 /**********************************
- * 4. Quickest math class ever.
+ * #4: Null and undefined
+ *
+ * Null represents the intentional absence of value.
+ * Undefined represents a lack of defined value. Variables that are declared but don't have an initial value set will be assigned the value `undefined`.
+ *
+ * Define two variables: isNull and isUndefined.
+ * Assign the value null to isNull and the value undefined to isUndefined.
+ */
+
+// Replace this comment with your code.
+
+/**********************************
+ * 5. Quickest math class ever.
  *
  * Define the variable numA. Assign it the value 15.
  * Define the variable numB. Assign it the value 3.
@@ -99,7 +111,17 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  xdescribe("#4: Quickest Math Class Ever", () => {
+  describe("#4: Null and undefined", () => {
+    it("isNull -> should have a `null` value", () => {
+      expect(isNull).to.be.a("null");
+    });
+
+    it("isUndefined -> should have an `undefined` value", () => {
+      expect(isUndefined).to.be.a("undefined");
+    });
+  });
+
+  xdescribe("#5: Quickest Math Class Ever", () => {
     describe("Variable declarations and value assignements", () => {
       it("numA -> assigned a number value of 15", () => {
         expect(numA).to.be.a("number");
