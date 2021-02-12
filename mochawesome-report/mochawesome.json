@@ -1,0 +1,369 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 9,
+    "passes": 0,
+    "pending": 0,
+    "failures": 9,
+    "start": "2021-02-12T00:27:19.749Z",
+    "end": "2021-02-12T00:27:19.758Z",
+    "duration": 9,
+    "testsRegistered": 9,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "21043ce6-439c-4b64-8138-70868d8f47dd",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "57fd0195-7b6d-41b9-bd8e-7b84fd6e6b83",
+          "title": "01 - Values and Types",
+          "fullFile": "/home/colombo/Programming/intro-to-code-js/01-Values-and-Data-Types/index.js",
+          "file": "/01-Values-and-Data-Types/index.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "a93886f1-0a64-4b35-8b63-54a33e686459",
+              "title": "1. The variable myName",
+              "fullFile": "/home/colombo/Programming/intro-to-code-js/01-Values-and-Data-Types/index.js",
+              "file": "/01-Values-and-Data-Types/index.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should be a string",
+                  "fullTitle": "01 - Values and Types 1. The variable myName should be a string",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0, _chai.expect)(myName).to.be.a(\"string\");",
+                  "err": {
+                    "message": "ReferenceError: myName is not defined",
+                    "estack": "ReferenceError: myName is not defined\n    at Context.<anonymous> (01-Values-and-Data-Types/index.js:40:14)\n    at processImmediate (internal/timers.js:458:21)",
+                    "diff": null
+                  },
+                  "uuid": "0b0f5528-c81f-48bb-80b3-c096728a9c98",
+                  "parentUUID": "a93886f1-0a64-4b35-8b63-54a33e686459",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should not be an empty string",
+                  "fullTitle": "01 - Values and Types 1. The variable myName should not be an empty string",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0, _chai.expect)(myName).to.not.be.empty;",
+                  "err": {
+                    "message": "ReferenceError: myName is not defined",
+                    "estack": "ReferenceError: myName is not defined\n    at Context.<anonymous> (01-Values-and-Data-Types/index.js:44:14)\n    at processImmediate (internal/timers.js:458:21)",
+                    "diff": null
+                  },
+                  "uuid": "8640b42b-2409-41e2-9729-12913353b653",
+                  "parentUUID": "a93886f1-0a64-4b35-8b63-54a33e686459",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "0b0f5528-c81f-48bb-80b3-c096728a9c98",
+                "8640b42b-2409-41e2-9729-12913353b653"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d3fd1eee-4bc2-4b05-aa73-99b8726a4e74",
+              "title": "The variable myAge",
+              "fullFile": "/home/colombo/Programming/intro-to-code-js/01-Values-and-Data-Types/index.js",
+              "file": "/01-Values-and-Data-Types/index.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should be a number",
+                  "fullTitle": "01 - Values and Types The variable myAge should be a number",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0, _chai.expect)(myAge).to.be.a(\"number\");",
+                  "err": {
+                    "message": "ReferenceError: myAge is not defined",
+                    "estack": "ReferenceError: myAge is not defined\n    at Context.<anonymous> (01-Values-and-Data-Types/index.js:50:14)\n    at processImmediate (internal/timers.js:458:21)",
+                    "diff": null
+                  },
+                  "uuid": "a1e14377-efb9-4fcc-89d9-f2c52f3f03fc",
+                  "parentUUID": "d3fd1eee-4bc2-4b05-aa73-99b8726a4e74",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "has a value of 70",
+                  "fullTitle": "01 - Values and Types The variable myAge has a value of 70",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0, _chai.expect)(myAge).to.equal(70);",
+                  "err": {
+                    "message": "ReferenceError: myAge is not defined",
+                    "estack": "ReferenceError: myAge is not defined\n    at Context.<anonymous> (01-Values-and-Data-Types/index.js:54:14)\n    at processImmediate (internal/timers.js:458:21)",
+                    "diff": null
+                  },
+                  "uuid": "09620ce8-1bdb-4bbe-918a-9e93a981842d",
+                  "parentUUID": "d3fd1eee-4bc2-4b05-aa73-99b8726a4e74",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "a1e14377-efb9-4fcc-89d9-f2c52f3f03fc",
+                "09620ce8-1bdb-4bbe-918a-9e93a981842d"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "a6a22804-3809-404a-97d0-19af6f37fae5",
+              "title": "The variable codingIsFun",
+              "fullFile": "/home/colombo/Programming/intro-to-code-js/01-Values-and-Data-Types/index.js",
+              "file": "/01-Values-and-Data-Types/index.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should be a boolean value",
+                  "fullTitle": "01 - Values and Types The variable codingIsFun should be a boolean value",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0, _chai.expect)(codingIsFun).to.be.a(\"boolean\");",
+                  "err": {
+                    "message": "ReferenceError: codingIsFun is not defined",
+                    "estack": "ReferenceError: codingIsFun is not defined\n    at Context.<anonymous> (01-Values-and-Data-Types/index.js:60:14)\n    at processImmediate (internal/timers.js:458:21)",
+                    "diff": null
+                  },
+                  "uuid": "702185e2-4ea7-47be-8a6b-9ffe3eddceaa",
+                  "parentUUID": "a6a22804-3809-404a-97d0-19af6f37fae5",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should confirm that it's in fact a good movie",
+                  "fullTitle": "01 - Values and Types The variable codingIsFun should confirm that it's in fact a good movie",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0, _chai.expect)(codingIsFun).to.equal(true);",
+                  "err": {
+                    "message": "ReferenceError: codingIsFun is not defined",
+                    "estack": "ReferenceError: codingIsFun is not defined\n    at Context.<anonymous> (01-Values-and-Data-Types/index.js:64:14)\n    at processImmediate (internal/timers.js:458:21)",
+                    "diff": null
+                  },
+                  "uuid": "9cd177ee-dfdc-4370-87a4-3ecee248c38d",
+                  "parentUUID": "a6a22804-3809-404a-97d0-19af6f37fae5",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "702185e2-4ea7-47be-8a6b-9ffe3eddceaa",
+                "9cd177ee-dfdc-4370-87a4-3ecee248c38d"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "6a27f71b-3da0-42a0-938d-fffa7cb7e451",
+              "title": "The variable ghostbustersInfo",
+              "fullFile": "/home/colombo/Programming/intro-to-code-js/01-Values-and-Data-Types/index.js",
+              "file": "/01-Values-and-Data-Types/index.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should be an object",
+                  "fullTitle": "01 - Values and Types The variable ghostbustersInfo should be an object",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0, _chai.expect)(ghostbustersInfo).to.be.an(\"object\");",
+                  "err": {
+                    "message": "ReferenceError: ghostbustersInfo is not defined",
+                    "estack": "ReferenceError: ghostbustersInfo is not defined\n    at Context.<anonymous> (01-Values-and-Data-Types/index.js:70:14)\n    at processImmediate (internal/timers.js:458:21)",
+                    "diff": null
+                  },
+                  "uuid": "8c947cfb-2b14-4c6b-8016-a3ec1f31d993",
+                  "parentUUID": "6a27f71b-3da0-42a0-938d-fffa7cb7e451",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should have the keys, \"year\", \"ghostbusters\", and \"tagline\"",
+                  "fullTitle": "01 - Values and Types The variable ghostbustersInfo should have the keys, \"year\", \"ghostbusters\", and \"tagline\"",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0, _chai.expect)(ghostbustersInfo).to.have.all.keys(\"year\", \"ghostbusters\", \"tagline\");",
+                  "err": {
+                    "message": "ReferenceError: ghostbustersInfo is not defined",
+                    "estack": "ReferenceError: ghostbustersInfo is not defined\n    at Context.<anonymous> (01-Values-and-Data-Types/index.js:74:14)\n    at processImmediate (internal/timers.js:458:21)",
+                    "diff": null
+                  },
+                  "uuid": "0ff53dd1-8207-4442-9301-f96eca532c6d",
+                  "parentUUID": "6a27f71b-3da0-42a0-938d-fffa7cb7e451",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should have the values of its keys correctly assigned",
+                  "fullTitle": "01 - Values and Types The variable ghostbustersInfo should have the values of its keys correctly assigned",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "(0, _chai.expect)(ghostbustersInfo.year).to.be.a(\"number\");\n(0, _chai.expect)(ghostbustersInfo.ghostbusters).to.be.an(\"array\");\n(0, _chai.expect)(ghostbustersInfo.tagline).to.be.a(\"string\");",
+                  "err": {
+                    "message": "ReferenceError: ghostbustersInfo is not defined",
+                    "estack": "ReferenceError: ghostbustersInfo is not defined\n    at Context.<anonymous> (01-Values-and-Data-Types/index.js:82:14)\n    at processImmediate (internal/timers.js:458:21)",
+                    "diff": null
+                  },
+                  "uuid": "0f727839-37e4-4ec1-83f7-af6ee3c576bf",
+                  "parentUUID": "6a27f71b-3da0-42a0-938d-fffa7cb7e451",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "8c947cfb-2b14-4c6b-8016-a3ec1f31d993",
+                "0ff53dd1-8207-4442-9301-f96eca532c6d",
+                "0f727839-37e4-4ec1-83f7-af6ee3c576bf"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 0,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "autoOpen": "true"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
