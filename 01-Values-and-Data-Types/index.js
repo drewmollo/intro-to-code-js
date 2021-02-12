@@ -1,11 +1,11 @@
 /**********************************
  * #1: What's your name?
  *
- * Define the variable myName.
+ * Define the variable myFirstName.
  * Assign it the string of your name.
  */
 
-const myName = "your name goes here";
+const myFirstName = "name";
 
 /**********************************
  * #2: What's your age?
@@ -69,13 +69,15 @@ let moduloOf = numA % numB;
  * #6: Numbers and Words, all together
  *
  * Define the variable myDetails.
- * Write a sentence that uses the values of myName and myAge.
- * Assign that sentence as the value of myDetails
+ * Assign it the value of a template literal that has the myFirstName and myAge variables embedded within. DO NOT direct embed the values into myDetails.
+ *
+ * e.g. if myFirstName = "Christian" and myAge = 32:
+ * My name is Christian and I'm 32 years old.
  *
  * SEE: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#expression_interpolation
  */
 
-// Replace this comment with your code.
+const myDetails = `My name is ${myFirstName} and I'm ${myAge} years old.`;
 
 /**
  * The code below is what tests your answers.
@@ -89,13 +91,13 @@ import { expect } from "chai";
 
 describe("01 - Values and Types", () => {
   describe("#1: What's your name?", () => {
-    describe("The variable myName", () => {
+    describe("The variable myFirstName", () => {
       it("should be a string", () => {
-        expect(myName).to.be.a("string");
+        expect(myFirstName).to.be.a("string");
       });
 
       it("should not be an empty string", () => {
-        expect(myName).to.not.be.empty;
+        expect(myFirstName).to.not.be.empty;
       });
     });
   });
@@ -158,6 +160,22 @@ describe("01 - Values and Types", () => {
       it("moduloOf -> expression assignment evaluates to 0", () => {
         expect(moduloOf).to.equal(0);
       });
+    });
+  });
+
+  describe("#6: Numbers and words, all together", () => {
+    it("myDetails -> is a string", () => {
+      expect(myDetails).to.be.a("string");
+    });
+
+    const myDetailsSplit = myDetails.split(" ");
+
+    it("myDetails features the value of myFirstName", () => {
+      expect(myDetailsSplit).to.include(`${myFirstName}`);
+    });
+
+    it("myDetails features the value of myAge", () => {
+      expect(myDetailsSplit).to.include(`${myAge}`);
     });
   });
 });
