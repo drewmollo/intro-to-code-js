@@ -5,7 +5,7 @@
  * Assign it the string of your name.
  */
 
-// Replace this comment with your code.
+const myName = "your name goes here";
 
 /**********************************
  * #2: What's your age?
@@ -14,7 +14,7 @@
  * Assign it the value of your age.
  */
 
-// Replace this comment with your code.
+const myAge = 40;
 
 /**********************************
  * #3: In fact, it's super fun.
@@ -23,7 +23,7 @@
  * There's only one right answer here.
  */
 
-// Replace this comment with your code.
+const codingIsFun = true;
 
 /**********************************
  * #4: Null and undefined
@@ -35,10 +35,11 @@
  * Assign the value null to isNull and the value undefined to isUndefined.
  */
 
-// Replace this comment with your code.
+const isNull = null;
+const isUndefined = undefined;
 
 /**********************************
- * 5. Quickest math class ever.
+ * #5: Quickest math class ever.
  *
  * Define the variable numA. Assign it the value 15.
  * Define the variable numB. Assign it the value 3.
@@ -55,7 +56,8 @@
  * Pass numA and numB in as variables, not as their values.
  */
 
-// Replace this comment with your code.
+let numA = 15;
+let numB = 3;
 
 let addedTo = numA + numB;
 let subtractedBy = numA - numB;
@@ -64,7 +66,7 @@ let dividedBy = numA / numB;
 let moduloOf = numA % numB;
 
 /**********************************
- * 5. Numbers and Words, all together
+ * #6: Numbers and Words, all together
  *
  * Define the variable myDetails.
  * Write a sentence that uses the values of myName and myAge.
@@ -81,11 +83,12 @@ let moduloOf = numA % numB;
  * To test your answers to one of the problems above:
  * 1. Find the number of the problem you're working on
  * 2. Remove the `x` in `xdescribe` so that it reads `describe`
+ * 3. Hit the Run button in REPL or type `npm test` in your terminal
  */
 import { expect } from "chai";
 
 describe("01 - Values and Types", () => {
-  xdescribe("#1: What's your name?", () => {
+  describe("#1: What's your name?", () => {
     describe("The variable myName", () => {
       it("should be a string", () => {
         expect(myName).to.be.a("string");
@@ -97,7 +100,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  xdescribe("#2: What's your age?", () => {
+  describe("#2: What's your age?", () => {
     describe("The variable myAge", () => {
       it("should be a number", () => {
         expect(myAge).to.be.a("number");
@@ -105,7 +108,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  xdescribe("#3: In fact, it's super fun", () => {
+  describe("#3: In fact, it's super fun", () => {
     describe("The variable codingIsFun", () => {
       it("should be a boolean value", () => {
         expect(codingIsFun).to.be.a("boolean");
@@ -127,7 +130,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  xdescribe("#5: Quickest Math Class Ever", () => {
+  describe("#5: Quickest Math Class Ever", () => {
     describe("Variable declarations and value assignements", () => {
       it("numA -> assigned a number value of 15", () => {
         expect(numA).to.be.a("number");
