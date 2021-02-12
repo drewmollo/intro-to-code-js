@@ -5,7 +5,7 @@
  * Assign it the string of your name.
  */
 
-const myFirstName = "name";
+// Replace this comment with your code.
 
 /**********************************
  * #2: What's your age?
@@ -14,7 +14,7 @@ const myFirstName = "name";
  * Assign it the value of your age.
  */
 
-const myAge = 40;
+// Replace this comment with your code.
 
 /**********************************
  * #3: In fact, it's super fun.
@@ -23,7 +23,7 @@ const myAge = 40;
  * There's only one right answer here.
  */
 
-const codingIsFun = true;
+// Replace this comment with your code.
 
 /**********************************
  * #4: Null and undefined
@@ -35,8 +35,7 @@ const codingIsFun = true;
  * Assign the value null to isNull and the value undefined to isUndefined.
  */
 
-const isNull = null;
-const isUndefined = undefined;
+// Replace this comment with your code.
 
 /**********************************
  * #5: Quickest math class ever.
@@ -56,14 +55,7 @@ const isUndefined = undefined;
  * Pass numA and numB in as variables, not as their values.
  */
 
-let numA = 15;
-let numB = 3;
-
-let addedTo = numA + numB;
-let subtractedBy = numA - numB;
-let multipliedBy = numA * numB;
-let dividedBy = numA / numB;
-let moduloOf = numA % numB;
+// Replace this comment with your code.
 
 /**********************************
  * #6: Numbers and Words, all together
@@ -77,7 +69,7 @@ let moduloOf = numA % numB;
  * SEE: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#expression_interpolation
  */
 
-const myDetails = `My name is ${myFirstName} and I'm ${myAge} years old.`;
+// Replace this comment with your code.
 
 /**
  * The code below is what tests your answers.
@@ -168,14 +160,12 @@ describe("01 - Values and Types", () => {
       expect(myDetails).to.be.a("string");
     });
 
-    const myDetailsSplit = myDetails.split(" ");
-
     it("myDetails features the value of myFirstName", () => {
-      expect(myDetailsSplit).to.include(`${myFirstName}`);
+      expect(myDetails.split(" ")).to.include(`${myFirstName}`);
     });
 
     it("myDetails features the value of myAge", () => {
-      expect(myDetailsSplit).to.include(`${myAge}`);
+      expect(myDetails.split(" ")).to.include(`${myAge}`);
     });
   });
 });
