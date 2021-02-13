@@ -94,7 +94,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  describe("#2: What's your age?", () => {
+  xdescribe("#2: What's your age?", () => {
     describe("The variable myAge", () => {
       it("should be a number", () => {
         expect(myAge).to.be.a("number");
@@ -102,7 +102,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  describe("#3: In fact, it's super fun", () => {
+  xdescribe("#3: In fact, it's super fun", () => {
     describe("The variable codingIsFun", () => {
       it("should be a boolean value", () => {
         expect(codingIsFun).to.be.a("boolean");
@@ -114,7 +114,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  describe("#4: Null and undefined", () => {
+  xdescribe("#4: Null and undefined", () => {
     it("isNull -> should have a `null` value", () => {
       expect(isNull).to.be.a("null");
     });
@@ -124,7 +124,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  describe("#5: Quickest Math Class Ever", () => {
+  xdescribe("#5: Quickest Math Class Ever", () => {
     describe("Variable declarations and value assignements", () => {
       it("numA -> assigned a number value of 15", () => {
         expect(numA).to.be.a("number");
@@ -155,7 +155,7 @@ describe("01 - Values and Types", () => {
     });
   });
 
-  describe("#6: Numbers and words, all together", () => {
+  xdescribe("#6: Numbers and words, all together", () => {
     it("myDetails -> is a string", () => {
       expect(myDetails).to.be.a("string");
     });
