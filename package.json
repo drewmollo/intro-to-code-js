@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha './01-Values-and-Data-Types/**.js'",
-    "test:mochawesome": "mocha './01-Values-and-Data-Types/index.js' --reporter=mochawesome --reporter-options autoOpen=true"
+    "test": "mocha './02-Conditionals/**.js'",
+    "test:mochawesome": "mocha './02-Conditionals/index.js' --reporter=mochawesome --reporter-options autoOpen=true"
   },
   "repository": {
     "type": "git",
