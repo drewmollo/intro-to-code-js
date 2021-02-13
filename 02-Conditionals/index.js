@@ -134,7 +134,7 @@ function testGrader(grade) {
 }
 
 /**********************************
- * #4: daysInTheMonth
+ * #5: daysInTheMonth
  *
  * daysInTheMonth is a function that accepts one input: a monthNum that is between 1 and 12.
  *
