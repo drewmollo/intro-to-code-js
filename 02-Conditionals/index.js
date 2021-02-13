@@ -50,7 +50,7 @@ let isItFiveChars =
  * #3: truthyFalsy
  *
  * truthyFalsy is a function that accepts a value of any type.
- * Complete the function truthyFalsy given below by writing conditional statements that do the following.
+ * Complete the function truthyFalsy given below by writing conditional statements in the function block that do the following.
  *
  * - return false:
  *    value is any of the following: 0, "", null, undefined, false
