@@ -21,11 +21,7 @@ const givenTwo = "cheese" === "cheese"; // true
 const givenThree = 15 / 3 === 5; // true
 const givenFour = 12 > 13; // false
 
-const andTrue = givenTwo && givenThree; // true && true
-const andFalse = givenOne && givenFour; // false && false
-
-const orTrue = givenTwo || givenThree;
-const orFalse = givenOne || givenFour;
+// Replace this comment with your code.
 
 /**********************************
  * #2: 5 characters
@@ -42,9 +38,8 @@ const orFalse = givenOne || givenFour;
  * String length: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
  * Ternary: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
  */
-let notFiveChars = "a1b2b3";
-let isItFiveChars =
-  notFiveChars.length === 5 ? "it's 5 characters" : "not 5 characters";
+
+// Replace this comment with your code.
 
 /**********************************
  * #3: truthyFalsy
@@ -70,36 +65,7 @@ let isItFiveChars =
  * Truthy: https://developer.mozilla.org/en-US/docs/Glossary/Truthy
  */
 
-function truthyFalsy(value) {
-  if (
-    value === 0 ||
-    value === "" ||
-    value === null ||
-    value === false ||
-    value === undefined
-  ) {
-    return false;
-  } else {
-    return true;
-  }
-}
-
-/**
- * CHALLENGE ANSWER:
- * Using ! to negate the incoming value forces the value into a Boolean and negates it.
- * This is one to force a value to work in a Boolean context.
- * Comment out the function above and uncomment the one below to try it out
- */
-
-// function truthyFalsy(value) {
-//   console.log("value before forcing into Boolean with !:", value);
-//   if (!value) {
-//     console.log("same value after:", !value);
-//     return false;
-//   }
-//   console.log("same value after:", !value);
-//   return true;
-// }
+// Replace this comment with your code.
 
 /**********************************
  * #4: testGrader
@@ -119,22 +85,10 @@ function truthyFalsy(value) {
  *    -> return 'F'
  */
 
-function testGrader(grade) {
-  if (grade >= 90) {
-    return "A";
-  } else if (grade >= 80) {
-    return "B";
-  } else if (grade >= 70) {
-    return "C";
-  } else if (grade >= 60) {
-    return "D";
-  } else {
-    return "F";
-  }
-}
+// Replace this comment with your code.
 
 /**********************************
- * #4: daysInTheMonth
+ * #5: daysInTheMonth
  *
  * daysInTheMonth is a function that accepts one input: a monthNum that is between 1 and 12.
  *
@@ -148,25 +102,7 @@ function testGrader(grade) {
  *    -> return 28
  */
 
-function daysInTheMonth(month) {
-  switch (month) {
-    case 1:
-    case 3:
-    case 5:
-    case 7:
-    case 8:
-    case 10:
-    case 12:
-      return 31;
-    case 4:
-    case 6:
-    case 9:
-    case 11:
-      return 30;
-    case 2:
-      return 28;
-  }
-}
+// Replace this comment with your code.
 
 /**
  * The code below is what tests your answers.
@@ -199,7 +135,7 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  describe("#2: 5 characters", () => {
+  xdescribe("#2: 5 characters", () => {
     describe("notFiveChars", () => {
       it("is a string that isn't 5 characters long", () => {
         expect(notFiveChars).to.be.a("string").to.not.have.lengthOf(5);
@@ -213,7 +149,7 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  describe("#3: truthyFalsy", () => {
+  xdescribe("#3: truthyFalsy", () => {
     describe("returns false", () => {
       it("value -> 0", () => {
         expect(truthyFalsy(0)).to.be.false;
@@ -259,7 +195,7 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  describe("#4: testGrader", () => {
+  xdescribe("#4: testGrader", () => {
     describe("returns the correct grade", () => {
       it("when grade is between 90 and 100", () => {
         expect(testGrader(100)).to.equal("A");
@@ -298,7 +234,7 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  describe("#5: daysInTheMonth", () => {
+  xdescribe("#5: daysInTheMonth", () => {
     describe("returns the correct number of days", () => {
       it("when the month is 1, 3, 5, 7, 8, 10, 12", () => {
         expect(daysInTheMonth(1)).to.equal(31);
