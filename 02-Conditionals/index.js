@@ -50,12 +50,12 @@ let isItFiveChars =
  * #3: truthyFalsy
  *
  * truthyFalsy is a function that accepts a value of any type.
- * Complete the function truthyFalsy given below by writing conditional statements in the function block that do the following.
+ * Complete the function truthyFalsy given below by writing conditional statements in the function block that fulfill the following.
  *
- * - return false:
- *    value is any of the following: 0, "", null, undefined, false
- * - return true:
- *    value is anything else
+ * - value is any of the following: 0, "", null, undefined, false
+ *    -> return false
+ * - value is anything else:
+ *    -> return true
  *
  * You do not need to call the function with these values; the function will be automatically tested with them.
  *
@@ -75,8 +75,8 @@ function truthyFalsy(value) {
     value === 0 ||
     value === "" ||
     value === null ||
-    value === undefined ||
-    value === false
+    value === false ||
+    value === undefined
   ) {
     return false;
   } else {
@@ -100,6 +100,73 @@ function truthyFalsy(value) {
 //   console.log("same value after:", !value);
 //   return true;
 // }
+
+/**********************************
+ * #4: testGrader
+ *
+ * testGrader is a function that accepts one input: a grade that is between 0 and 100. testGrader returns a letter grade that corresponding the
+ * Complete the function testGrader given below by writing condtional statements that fulfill the following.
+ *
+ * - grade is 90 to 100
+ *    -> return 'A'
+ * - grade is 80 to 89
+ *    -> return 'B'
+ * - grade is 70 to 79
+ *    -> return 'C'
+ * - grade is 60 to 69
+ *    -> return 'D'
+ * - grade is below 60
+ *    -> return 'F'
+ */
+
+function testGrader(grade) {
+  if (grade >= 90) {
+    return "A";
+  } else if (grade >= 80) {
+    return "B";
+  } else if (grade >= 70) {
+    return "C";
+  } else if (grade >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
+
+/**********************************
+ * #4: daysInTheMonth
+ *
+ * daysInTheMonth is a function that accepts one input: a monthNum that is between 1 and 12.
+ *
+ * Complete the function daysInTheMonth given below by writing conditional statements that fulfill the following.
+ *
+ * - if the month is 1, 3, 5, 7, 8, 10, or 12
+ *    -> return 31
+ * - if the month is 4, 6, 9, 11
+ *    -> return 30
+ * - if the month is 2
+ *    -> return 28
+ */
+
+function daysInTheMonth(month) {
+  switch (month) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      return 31;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      return 30;
+    case 2:
+      return 28;
+  }
+}
 
 /**
  * The code below is what tests your answers.
@@ -166,24 +233,92 @@ describe("02 - Conditionals", () => {
       it("value -> false", () => {
         expect(truthyFalsy(false)).to.be.false;
       });
+
       it("value -> any other number", () => {
         expect(truthyFalsy(1)).to.be.true;
         expect(truthyFalsy(Math.PI)).to.be.true;
         expect(truthyFalsy(Infinity)).to.be.true;
       });
+
       it("value -> any other string", () => {
         expect(truthyFalsy("a")).to.be.true;
         expect(truthyFalsy("hello 'world'")).to.be.true;
         expect(truthyFalsy(`template expression 1 + 2 = ${1 + 2}`)).to.be.true;
       });
+
       it("value -> an array", () => {
         expect(truthyFalsy([])).to.be.true;
         expect(truthyFalsy([1])).to.be.true;
         expect(truthyFalsy([1, 2, 3, 4, 5])).to.be.true;
       });
+
       it("value -> an object", () => {
         expect(truthyFalsy({})).to.be.true;
         expect(truthyFalsy({ a: 1 })).to.be.true;
+      });
+    });
+  });
+
+  describe("#4: testGrader", () => {
+    describe("returns the correct grade", () => {
+      it("when grade is between 90 and 100", () => {
+        expect(testGrader(100)).to.equal("A");
+        expect(testGrader(97)).to.equal("A");
+        expect(testGrader(93)).to.equal("A");
+        expect(testGrader(90)).to.equal("A");
+      });
+
+      it("when grade is between 80 and 89", () => {
+        expect(testGrader(89)).to.equal("B");
+        expect(testGrader(87)).to.equal("B");
+        expect(testGrader(83)).to.equal("B");
+        expect(testGrader(80)).to.equal("B");
+      });
+
+      it("when grade is between 70 and 79", () => {
+        expect(testGrader(79)).to.equal("C");
+        expect(testGrader(77)).to.equal("C");
+        expect(testGrader(73)).to.equal("C");
+        expect(testGrader(70)).to.equal("C");
+      });
+
+      it("when grade is between 60 and 69", () => {
+        expect(testGrader(69)).to.equal("D");
+        expect(testGrader(67)).to.equal("D");
+        expect(testGrader(63)).to.equal("D");
+        expect(testGrader(60)).to.equal("D");
+      });
+
+      it("when grade is below 60", () => {
+        for (let i = 0; i < 100; i++) {
+          let gradeUnder60 = Math.ceil(Math.random() * 59);
+          expect(testGrader(gradeUnder60)).to.equal("F");
+        }
+      });
+    });
+  });
+
+  describe("#5: daysInTheMonth", () => {
+    describe("returns the correct number of days", () => {
+      it("when the month is 1, 3, 5, 7, 8, 10, 12", () => {
+        expect(daysInTheMonth(1)).to.equal(31);
+        expect(daysInTheMonth(3)).to.equal(31);
+        expect(daysInTheMonth(5)).to.equal(31);
+        expect(daysInTheMonth(7)).to.equal(31);
+        expect(daysInTheMonth(8)).to.equal(31);
+        expect(daysInTheMonth(10)).to.equal(31);
+        expect(daysInTheMonth(12)).to.equal(31);
+      });
+
+      it("when the month is 4, 6, 9, 11", () => {
+        expect(daysInTheMonth(4)).to.equal(30);
+        expect(daysInTheMonth(6)).to.equal(30);
+        expect(daysInTheMonth(9)).to.equal(30);
+        expect(daysInTheMonth(11)).to.equal(30);
+      });
+
+      it("when the month is 2", () => {
+        expect(daysInTheMonth(2)).to.equal(28);
       });
     });
   });
