@@ -6,7 +6,8 @@
   "scripts": {
     "test-01": "mocha './01-Values-and-Data-Types/**.js'",
     "test-02": "mocha './02-Conditionals/**.js'",
-    "test:mochawesome": "mocha './02-Conditionals/index.js' --reporter=mochawesome --reporter-options autoOpen=true"
+    "test-03": "mocha './03-Methods-and-Functions/**.js'",
+    "test:mochawesome": "mocha './**/**.js' --reporter=mochawesome --reporter-options autoOpen=true"
   },
   "repository": {
     "type": "git",

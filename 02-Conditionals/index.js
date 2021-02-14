@@ -50,9 +50,32 @@ let isItFiveChars =
   notFiveChars.length === 5 ? "it's 5 characters" : "not 5 characters";
 
 /**********************************
- * #3: truthyFalsy
+ * #3: numberOrString
  *
- * truthyFalsy is a function that accepts a value of any type.
+ * numberOrString is a function that accepts one input, a value of any type.
+ * numberOrString returns the following based on these conditions:
+ *
+ * - "This is a string" if the value is a String
+ * - "This is a number" if the value is a Number
+ * - "This is not a string nor a number" if it's neither
+ *
+ * SEE:
+ * - return statement: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return
+ */
+
+function numberOrString(value) {
+  if (typeof value === "string") {
+    return "This is a string";
+  } else if (typeof value === "number") {
+    return "This is a number";
+  }
+  return "This is not a string nor a number";
+}
+
+/**********************************
+ * #4: truthyFalsy
+ *
+ * truthyFalsy is a function that accepts one input, a value of any type.
  * Complete the function truthyFalsy given below by writing conditional statements in the function block that fulfill the following.
  *
  * - value is any of the following: 0, "", null, undefined, false
@@ -124,7 +147,7 @@ function truthyFalsy(value) {
 // }
 
 /**********************************
- * #4: testGrader
+ * #5: testGrader
  *
  * testGrader is a function that accepts one input: a grade that is between 0 and 100. testGrader returns a letter grade that corresponding the
  * Complete the function testGrader given below by writing condtional statements that fulfill the following.
@@ -158,7 +181,7 @@ function testGrader(grade) {
 }
 
 /**********************************
- * #5: daysInTheMonth
+ * #6: daysInTheMonth
  *
  * daysInTheMonth is a function that accepts one input: a monthNum that is between 1 and 12.
  *
@@ -210,6 +233,7 @@ describe("02 - Conditionals", () => {
       it("andTrue -> evaluates two givens with && to TRUE", () => {
         expect(andTrue).to.be.true;
       });
+
       it("andFalse -> evaluates two givens with && to FALSE", () => {
         expect(andFalse).to.be.false;
       });
@@ -219,6 +243,7 @@ describe("02 - Conditionals", () => {
       it("orTrue -> evaluates two givens with || to TRUE", () => {
         expect(orTrue).to.be.true;
       });
+
       it("orFalse -> evaluates two givens with || to FALSE", () => {
         expect(orFalse).to.be.false;
       });
@@ -239,17 +264,46 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  describe("#3: truthyFalsy", () => {
+  describe("#3: numberOrString", () => {
+    describe("returns the correct output", () => {
+      it("string input -> 'This is a string'", () => {
+        expect(numberOrString("")).to.equal("This is a string");
+        expect(numberOrString("a")).to.equal("This is a string");
+        expect(numberOrString("word")).to.equal("This is a string");
+        expect(numberOrString("two words")).to.equal("This is a string");
+        expect(numberOrString("a1b2c3")).to.equal("This is a string");
+      });
+
+      it("number input -> 'This is a number'", () => {
+        for (let i = 1; i <= 100; i++) {
+          let num = i * Math.ceil(Math.random() * 99);
+          expect(numberOrString(num)).to.equal("This is a number");
+        }
+      });
+
+      it("any other input -> 'This is not a string nor a number'", () => {
+        let types = [{ a: 1 }, [1, 2, 3], false];
+
+        types.forEach((type) => {
+          expect(numberOrString(type)).to.be.a("string");
+        });
+      });
+    });
+  });
+  describe("#4: truthyFalsy", () => {
     describe("returns false", () => {
       it("value -> 0", () => {
         expect(truthyFalsy(0)).to.be.false;
       });
+
       it('value -> ""', () => {
         expect(truthyFalsy("")).to.be.false;
       });
+
       it("value -> null", () => {
         expect(truthyFalsy(null)).to.be.false;
       });
+
       it("value -> undefined", () => {
         expect(truthyFalsy(undefined)).to.be.false;
       });
@@ -285,7 +339,7 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  describe("#4: testGrader", () => {
+  describe("#5: testGrader", () => {
     describe("returns the correct grade", () => {
       it("when grade is between 90 and 100", () => {
         expect(testGrader(100)).to.equal("A");
@@ -316,7 +370,7 @@ describe("02 - Conditionals", () => {
       });
 
       it("when grade is below 60", () => {
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 60; i++) {
           let gradeUnder60 = Math.ceil(Math.random() * 59);
           expect(testGrader(gradeUnder60)).to.equal("F");
         }
@@ -324,7 +378,7 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  describe("#5: daysInTheMonth", () => {
+  describe("#6: daysInTheMonth", () => {
     describe("returns the correct number of days", () => {
       it("when the month is 1, 3, 5, 7, 8, 10, 12", () => {
         expect(daysInTheMonth(1)).to.equal(31);
