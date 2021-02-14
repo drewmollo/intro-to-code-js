@@ -65,7 +65,9 @@ const givenFour = 12 > 13; // false
  * Truthy: https://developer.mozilla.org/en-US/docs/Glossary/Truthy
  */
 
-// Replace this comment with your code.
+function truthyFalsy(value) {
+  // Replace this comment with your code inside this function block.
+}
 
 /**********************************
  * #4: testGrader
@@ -85,8 +87,9 @@ const givenFour = 12 > 13; // false
  *    -> return 'F'
  */
 
-// Replace this comment with your code.
-
+function testGrader(grade) {
+  // Replace this comment with your code inside this function block.
+}
 /**********************************
  * #5: daysInTheMonth
  *
@@ -102,8 +105,9 @@ const givenFour = 12 > 13; // false
  *    -> return 28
  */
 
-// Replace this comment with your code.
-
+function daysInTheMonth(monthNum) {
+  // Replace this comment with your code inside this function block.
+}
 /**
  * The code below is what tests your answers.
  *
