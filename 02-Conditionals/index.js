@@ -24,8 +24,8 @@ const givenFour = 12 > 13; // false
 const andTrue = givenTwo && givenThree; // true && true
 const andFalse = givenOne && givenFour; // false && false
 
-const orTrue = givenTwo || givenThree;
-const orFalse = givenOne || givenFour;
+const orTrue = givenTwo || givenThree; // true || true
+const orFalse = givenOne || givenFour; // false || false
 
 /**********************************
  * #2: 5 characters
@@ -42,6 +42,9 @@ const orFalse = givenOne || givenFour;
  * String length: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
  * Ternary: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
  */
+
+// Ternary helper: (true/false expression to test) ? true value : false value
+
 let notFiveChars = "a1b2b3";
 let isItFiveChars =
   notFiveChars.length === 5 ? "it's 5 characters" : "not 5 characters";
@@ -70,6 +73,9 @@ let isItFiveChars =
  * Truthy: https://developer.mozilla.org/en-US/docs/Glossary/Truthy
  */
 
+// There are a number of ways to complete this function, one of which combines different expressions to test using the Logical OR (||) to create a single case that'll return false on ANY of the matching expressions.
+// You don't need an `else` to go with the if-statement because you simply `return true` if you don't enter the if code block. If there were more instructions to be run after that if-statement, then an `else` might be needed.
+
 function truthyFalsy(value) {
   if (
     value === 0 ||
@@ -79,10 +85,26 @@ function truthyFalsy(value) {
     value === undefined
   ) {
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
+
+// Another way to do this problem is by using a switch statement.
+// The fact that you have are asked to return false given a number of different conditions makes this a good situation for the switch statement.
+// You catch all the matching cases under one return and the default statement catches all other value possibilities.
+
+// function truthyFalsy(value) {
+//   switch (value) {
+//     case 0:
+//     case "":
+//     case null:
+//     case undefined:
+//     case false:
+//       return false;
+//     default:
+//       return true;
+//   }
+// }
 
 /**
  * CHALLENGE ANSWER:
@@ -119,6 +141,8 @@ function truthyFalsy(value) {
  *    -> return 'F'
  */
 
+// Here we connect various if and else-if statements with a final else because we have multiple different conditions to test, each with their own return statement.
+
 function testGrader(grade) {
   if (grade >= 90) {
     return "A";
@@ -147,6 +171,8 @@ function testGrader(grade) {
  * - if the month is 2
  *    -> return 28
  */
+
+// This is a problem where many different conditions resolve to the same result. We have many possible results so this is a great place to use a switch statement.
 
 function daysInTheMonth(month) {
   switch (month) {
