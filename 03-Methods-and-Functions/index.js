@@ -8,9 +8,7 @@
  * helloWorld() => "Hello World!"
  */
 
-function helloWorld() {
-  return "Hello World!";
-}
+// Replace this comment with your code.
 
 /**********************************
  * #2: helloWorldRedux
@@ -28,15 +26,7 @@ function helloWorld() {
  * Can you write this function as a one-liner? Remember to comment out the original function before testing your one-line version to avoid duplicate declaration errors!
  */
 
-function helloWorldRedux(name) {
-  if (name) {
-    return `Hello ${name}!`;
-  }
-  return "Hello World!";
-}
-
-// One-line function
-// const helloWorldRedux = (name) => (name ? `Hello ${name}!` : `Hello World!`);
+// Replace this comment with your code.
 
 /**********************************
  * #3: uppercaseThis
@@ -52,18 +42,13 @@ function helloWorldRedux(name) {
  * uppercaseThis("aaaa") => "AAAA"
  * uppercaseThis("BBBB") => "BBBB"
  * uppercaseThis("cCcC") => "CCCC"
- * uppercaseThis("d1D2d3") => "D1D2D3"
+ * uppercaseThis("d1D%d3") => "D1D%D3"
  *
  * CHALLENGE:
  * Can you write this function as a one-liner? Remember to comment out the original function before testing your one-line version to avoid duplicate declaration errors!
  */
 
-function uppercaseThis(phrase) {
-  return phrase.toUpperCase();
-}
-
-// One-line function
-// const uppercaseThis = phrase => phrase.toUpperCase()
+// Replace this comment with your code.
 
 /**********************************
  * #4: doesItAddUp
@@ -81,15 +66,7 @@ function uppercaseThis(phrase) {
  * Can you write this function as a one-liner? Remember to comment out the original function before testing your one-line version to avoid duplicate declaration errors!
  */
 
-function doesItAddUp(numA, numB, numC) {
-  if (numA + numB === numC) {
-    return true;
-  }
-  return false;
-}
-
-// One-line answer
-// const doesItAddUp = (numA, numB, numC) => numA + numB === numC;
+// Replace this comment with your code.
 
 /**********************************
  * #5: arrayToString
@@ -107,12 +84,7 @@ function doesItAddUp(numA, numB, numC) {
  * Can you write this function as a one-liner? Remember to comment out the original function before testing your one-line version to avoid duplicate declaration errors!
  */
 
-function arrayToString(array, connector) {
-  return array.join(connector);
-}
-
-// One-line answer
-// const arrayToString = (string, separator) => array.join(separator)
+// Replace this comment with your code.
 
 /**********************************
  * #6: smallTogetherNow
@@ -136,16 +108,7 @@ function arrayToString(array, connector) {
  * .concat() | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat
  */
 
-function smallTogetherNow(str1, str2) {
-  const lowerOne = str1.toLowerCase();
-  const lowerTwo = str2.toLowerCase();
-
-  return lowerOne + lowerTwo;
-}
-
-// One-line answer
-// const smallTogetherNow = (str1, str2) =>
-//   str1.toLowerCase().concat(str2.toLowerCase());
+// Replace this comment with your code.
 
 /**********************************
  * #7: Dog owners and their dogs
@@ -168,21 +131,7 @@ function smallTogetherNow(str1, str2) {
  *    "John and Star are the both 14 years old."
  */
 
-function dogAndOwnerInfo(dogName, dogAge, ownerName, ownerAge) {
-  let dogAgeInHumanYears = dogAge * 7;
-
-  if (dogAgeInHumanYears > ownerAge) {
-    return `${dogName} is older than their owner, ${ownerName}, by ${
-      dogAgeInHumanYears - ownerAge
-    } years.`;
-  } else if (dogAgeInHumanYears < ownerAge) {
-    return `${ownerName} is older than their dog, ${dogName}, by ${
-      ownerAge - dogAgeInHumanYears
-    } years.`;
-  } else {
-    return `${ownerName} and ${dogName} are both ${ownerAge} years old.`;
-  }
-}
+// Replace this comment with your code.
 
 /**********************************
  * #8: doesTheMathWork
@@ -207,19 +156,7 @@ function dogAndOwnerInfo(dogName, dogAge, ownerName, ownerAge) {
  * doesTheMathWork(11, 222, 3) = "no operation"
  */
 
-function doesTheMathWork(numA, numB, numC) {
-  if (numA + numB === numC) {
-    return "addition";
-  } else if (numA - numB === numC) {
-    return "subtraction";
-  } else if (numA * numB === numC) {
-    return "multiplication";
-  } else if (numA / numB === numC) {
-    return "division";
-  } else {
-    return "no operation";
-  }
-}
+// Replace this comment with your code.
 
 /**********************************
  * #9: allWordsLength
@@ -244,9 +181,7 @@ function doesTheMathWork(numA, numB, numC) {
  * Can you write this function as a one-liner? Remember to comment out the original function before testing your one-line version to avoid duplicate declaration errors!
  */
 
-function allWordsLength(array) {
-  return array.join("").length;
-}
+// Replace this comment with your code.
 
 /**
  * The code below is what tests your answers.
@@ -265,7 +200,7 @@ describe("03 - Methods and Functions", () => {
     });
   });
 
-  describe("#2: helloWorldRedux", () => {
+  xdescribe("#2: helloWorldRedux", () => {
     it("returns a personalized greeting if a name is passed in", () => {
       expect(helloWorldRedux("Markus")).to.equal("Hello Markus!");
       expect(helloWorldRedux("Jon")).to.equal("Hello Jon!");
@@ -277,7 +212,7 @@ describe("03 - Methods and Functions", () => {
     });
   });
 
-  describe("#3: uppercaseThis", () => {
+  xdescribe("#3: uppercaseThis", () => {
     describe("returns the phrase completely capitalized", () => {
       it("when the phrase is all lowercase", () => {
         expect(uppercaseThis("aaaa")).to.equal("AAAA");
@@ -290,11 +225,14 @@ describe("03 - Methods and Functions", () => {
       it("when the phrase has mixed capitals", () => {
         expect(uppercaseThis("cCcC")).to.equal("CCCC");
       });
-      expect(uppercaseThis("d1D2d3")).to.equal("D1D2D3");
+
+      it("when the phrase has mixed caps, numbers and symbols", () => {
+        expect(uppercaseThis("d1D%d3")).to.equal("D1D%D3");
+      });
     });
   });
 
-  describe("#4: doesItAddUp", () => {
+  xdescribe("#4: doesItAddUp", () => {
     it("returns true -> first two inputs equal the third", () => {
       expect(doesItAddUp(1, 2, 3)).to.be.true;
       expect(doesItAddUp(2, 1, 3)).to.be.true;
@@ -310,7 +248,7 @@ describe("03 - Methods and Functions", () => {
     });
   });
 
-  describe("#5: arrayToString", () => {
+  xdescribe("#5: arrayToString", () => {
     const array = ["cat", "dog", "moo"];
     describe("returns the correct string", () => {
       it("when the separator is an empty string ('')", () => {
@@ -327,7 +265,7 @@ describe("03 - Methods and Functions", () => {
     });
   });
 
-  describe("#6: smallTogetherNow", () => {
+  xdescribe("#6: smallTogetherNow", () => {
     describe("returns a unified, lowercase string", () => {
       it("when two uppercase input strings are passed in", () => {
         expect(smallTogetherNow("HELLO", "WORLD")).to.equal("helloworld");
@@ -343,7 +281,7 @@ describe("03 - Methods and Functions", () => {
     });
   });
 
-  describe("#7: Dog owners and their dogs", () => {
+  xdescribe("#7: Dog owners and their dogs", () => {
     describe("returns the correct phrase", () => {
       it("when dog is older than their owner", () => {
         expect(dogAndOwnerInfo("Turbo", 10, "Richard", 55)).to.equal(
@@ -365,7 +303,7 @@ describe("03 - Methods and Functions", () => {
     });
   });
 
-  describe("#8: doesTheMathWork", () => {
+  xdescribe("#8: doesTheMathWork", () => {
     describe("returns the correct operation", () => {
       it("first two inputs add (+) to third input -> 'addition'", () => {
         expect(doesTheMathWork(1, 2, 3)).to.equal("addition");
@@ -399,7 +337,7 @@ describe("03 - Methods and Functions", () => {
     });
   });
 
-  describe("#9: allWordsLength", () => {
+  xdescribe("#9: allWordsLength", () => {
     const testWords = [
       ["apple"],
       ["old", "textbook"],
