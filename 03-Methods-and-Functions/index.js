@@ -248,7 +248,7 @@ function allWordsLength(array) {
   return array.join("").length;
 }
 
-/**
+/**********************************
  * The code below is what tests your answers.
  *
  * To test your answers to one of the problems above:
