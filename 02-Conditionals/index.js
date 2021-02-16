@@ -21,11 +21,7 @@ const givenTwo = "cheese" === "cheese"; // true
 const givenThree = 15 / 3 === 5; // true
 const givenFour = 12 > 13; // false
 
-const andTrue = givenTwo && givenThree; // true && true
-const andFalse = givenOne && givenFour; // false && false
-
-const orTrue = givenTwo || givenThree; // true || true
-const orFalse = givenOne || givenFour; // false || false
+// Replace this comment with your code.
 
 /**********************************
  * #2: 5 characters
@@ -43,11 +39,7 @@ const orFalse = givenOne || givenFour; // false || false
  * Ternary: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
  */
 
-// Ternary helper: (true/false expression to test) ? true value : false value
-
-let notFiveChars = "a1b2b3";
-let isItFiveChars =
-  notFiveChars.length === 5 ? "it's 5 characters" : "not 5 characters";
+// Replace this comment with your code.
 
 /**********************************
  * #3: numberOrString
@@ -64,12 +56,7 @@ let isItFiveChars =
  */
 
 function numberOrString(value) {
-  if (typeof value === "string") {
-    return "This is a string";
-  } else if (typeof value === "number") {
-    return "This is a number";
-  }
-  return "This is not a string nor a number";
+  // Replace this comment with your code inside this function block.
 }
 
 /**********************************
@@ -96,55 +83,9 @@ function numberOrString(value) {
  * Truthy: https://developer.mozilla.org/en-US/docs/Glossary/Truthy
  */
 
-// There are a number of ways to complete this function, one of which combines different expressions to test using the Logical OR (||) to create a single case that'll return false on ANY of the matching expressions.
-// You don't need an `else` to go with the if-statement because you simply `return true` if you don't enter the if code block. If there were more instructions to be run after that if-statement, then an `else` might be needed.
-
 function truthyFalsy(value) {
-  if (
-    value === 0 ||
-    value === "" ||
-    value === null ||
-    value === false ||
-    value === undefined
-  ) {
-    return false;
-  }
-  return true;
+  // Replace this comment with your code inside this function block.
 }
-
-// Another way to do this problem is by using a switch statement.
-// The fact that you have are asked to return false given a number of different conditions makes this a good situation for the switch statement.
-// You catch all the matching cases under one return and the default statement catches all other value possibilities.
-
-// function truthyFalsy(value) {
-//   switch (value) {
-//     case 0:
-//     case "":
-//     case null:
-//     case undefined:
-//     case false:
-//       return false;
-//     default:
-//       return true;
-//   }
-// }
-
-/**
- * CHALLENGE ANSWER:
- * Using ! to negate the incoming value forces the value into a Boolean and negates it.
- * This is one to force a value to work in a Boolean context.
- * Comment out the function above and uncomment the one below to try it out
- */
-
-// function truthyFalsy(value) {
-//   console.log("value before forcing into Boolean with !:", value);
-//   if (!value) {
-//     console.log("same value after:", !value);
-//     return false;
-//   }
-//   console.log("same value after:", !value);
-//   return true;
-// }
 
 /**********************************
  * #5: testGrader
@@ -152,34 +93,16 @@ function truthyFalsy(value) {
  * testGrader is a function that accepts one input: a grade that is between 0 and 100. testGrader returns a letter grade that corresponding the
  * Complete the function testGrader given below by writing condtional statements that fulfill the following.
  *
- * - grade is 90 to 100
- *    -> return 'A'
- * - grade is 80 to 89
- *    -> return 'B'
- * - grade is 70 to 79
- *    -> return 'C'
- * - grade is 60 to 69
- *    -> return 'D'
- * - grade is below 60
- *    -> return 'F'
+ * - grade is 90 to 100 -> return 'A'
+ * - grade is 80 to 89 -> return 'B'
+ * - grade is 70 to 79 -> return 'C'
+ * - grade is 60 to 69 -> return 'D'
+ * - grade is below 60 -> return 'F'
  */
 
-// Here we connect various if and else-if statements with a final else because we have multiple different conditions to test, each with their own return statement.
-
 function testGrader(grade) {
-  if (grade >= 90) {
-    return "A";
-  } else if (grade >= 80) {
-    return "B";
-  } else if (grade >= 70) {
-    return "C";
-  } else if (grade >= 60) {
-    return "D";
-  } else {
-    return "F";
-  }
+  // Replace this comment with your code inside this function block.
 }
-
 /**********************************
  * #6: daysInTheMonth
  *
@@ -195,28 +118,9 @@ function testGrader(grade) {
  *    -> return 28
  */
 
-// This is a problem where many different conditions resolve to the same result. We have many possible results so this is a great place to use a switch statement.
-
-function daysInTheMonth(month) {
-  switch (month) {
-    case 1:
-    case 3:
-    case 5:
-    case 7:
-    case 8:
-    case 10:
-    case 12:
-      return 31;
-    case 4:
-    case 6:
-    case 9:
-    case 11:
-      return 30;
-    case 2:
-      return 28;
-  }
+function daysInTheMonth(monthNum) {
+  // Replace this comment with your code inside this function block.
 }
-
 /**
  * The code below is what tests your answers.
  *
@@ -250,7 +154,7 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  describe("#2: 5 characters", () => {
+  xdescribe("#2: 5 characters", () => {
     describe("notFiveChars", () => {
       it("is a string that isn't 5 characters long", () => {
         expect(notFiveChars).to.be.a("string").to.not.have.lengthOf(5);
@@ -264,7 +168,7 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  describe("#3: numberOrString", () => {
+  xdescribe("#3: numberOrString", () => {
     describe("returns the correct output", () => {
       it("string input -> 'This is a string'", () => {
         expect(numberOrString("")).to.equal("This is a string");
@@ -285,12 +189,14 @@ describe("02 - Conditionals", () => {
         let types = [{ a: 1 }, [1, 2, 3], false];
 
         types.forEach((type) => {
-          expect(numberOrString(type)).to.be.a("string");
+          expect(numberOrString(type)).to.equal(
+            "This is not a string nor a number"
+          );
         });
       });
     });
   });
-  describe("#4: truthyFalsy", () => {
+  xdescribe("#4: truthyFalsy", () => {
     describe("returns false", () => {
       it("value -> 0", () => {
         expect(truthyFalsy(0)).to.be.false;
@@ -339,7 +245,7 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  describe("#5: testGrader", () => {
+  xdescribe("#5: testGrader", () => {
     describe("returns the correct grade", () => {
       it("when grade is between 90 and 100", () => {
         expect(testGrader(100)).to.equal("A");
@@ -378,7 +284,7 @@ describe("02 - Conditionals", () => {
     });
   });
 
-  describe("#6: daysInTheMonth", () => {
+  xdescribe("#6: daysInTheMonth", () => {
     describe("returns the correct number of days", () => {
       it("when the month is 1, 3, 5, 7, 8, 10, 12", () => {
         expect(daysInTheMonth(1)).to.equal(31);
