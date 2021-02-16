@@ -254,7 +254,7 @@ function allWordsLength(array) {
  * To test your answers to one of the problems above:
  * 1. Find the number of the problem you're working on
  * 2. Remove the `x` in `xdescribe` so that it reads `describe`
- * 3. Hit the Run button in REPL or enter `npm test` in your terminal
+ * 3. Type `npm run test-03` in the Shell and hit Enter.
  */
 import { expect } from "chai";
 
