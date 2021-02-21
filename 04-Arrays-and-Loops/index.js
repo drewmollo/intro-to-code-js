@@ -95,9 +95,8 @@ function disemvoweler(string) {
   let noVowelStr = "";
 
   for (let i = 0; i < string.length; i++) {
-    const currChar = string[i];
-
     for (let j = 0; j < vowels.length; j++) {
+      const currChar = string[i];
       const currVowel = vowels[j];
 
       if (currChar === currVowel) {
