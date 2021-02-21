@@ -181,6 +181,27 @@ function switchomatic(array) {
   }
   return output;
 }
+
+/**********************************
+ * #: pairMultiplier
+ * NOTE:
+ * The nums and ops arrays will always be the same size, .length > 1
+ */
+
+function pairMultiplier(arr1, arr2) {
+  let productsArr = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      const numOne = arr1[i];
+      const numTwo = arr2[j];
+      // console.log(numOne, numTwo);
+      productsArr.push(numOne * numTwo);
+    }
+  }
+  return productsArr;
+}
+
 /**********************************
  * #: wordCalculator
  * NOTE:
@@ -226,6 +247,7 @@ function wordCalculator(nums, operations) {
  * 3. Type `npm run test-04` in the Shell and hit Enter.
  */
 import { expect } from "chai";
+import { describe } from "mocha";
 
 describe("04 - Arrays and Loops", () => {
   describe("#1: measurer", () => {
@@ -479,6 +501,58 @@ describe("04 - Arrays and Loops", () => {
     });
   });
 
+  describe("#: pairMultiplier", () => {
+    describe("returns an array of multiplied numbers, in the correct order", () => {
+      describe("when both arrays are the same size", () => {
+        const sameSize = [
+          {
+            arr1: [6],
+            arr2: [4],
+            result: [24],
+          },
+          { arr1: [3, 8], arr2: [5, 2], result: [15, 6, 40, 16] },
+          {
+            arr1: [2, 7, 9],
+            arr2: [5, 4, 6],
+            result: [10, 8, 12, 35, 28, 42, 45, 36, 54],
+          },
+        ];
+
+        sameSize.forEach(({ arr1, arr2, result }) => {
+          it(`[${arr1}], [${arr2}] -> [${result}]`, () => {
+            expect(pairMultiplier(arr1, arr2)).to.eql(result);
+          });
+        });
+      });
+
+      describe("first array smaller than second", () => {
+        const firstSmaller = [
+          { arr1: [7], arr2: [2, 3, 4], result: [14, 21, 28] },
+          { arr1: [2, 3], arr2: [4, 5, 6], result: [8, 10, 12, 12, 15, 18] },
+        ];
+
+        firstSmaller.forEach(({ arr1, arr2, result }) => {
+          it(`[${arr1}], [${arr2}] -> [${result}]`, () => {
+            expect(pairMultiplier(arr1, arr2)).to.eql(result);
+          });
+        });
+      });
+
+      describe("second array smaller than first", () => {
+        const secondSmaller = [
+          { arr1: [7, 3], arr2: [9], result: [63, 27] },
+          { arr1: [3, 5, 8], arr2: [2, 4], result: [6, 12, 10, 20, 16, 32] },
+        ];
+
+        secondSmaller.forEach(({ arr1, arr2, result }) => {
+          it(`[${arr1}], [${arr2}] -> [${result}]`, () => {
+            expect(pairMultiplier(arr1, arr2)).to.eql(result);
+          });
+        });
+      });
+    });
+  });
+
   describe("#: wordCalculator", () => {
     const calc1 = { nums: [1], ops: ["add"], result: 1 };
     const calc2 = { nums: [2], ops: ["sub"], result: -2 };
@@ -510,41 +584,21 @@ describe("04 - Arrays and Loops", () => {
 
     describe("returns the correct answer", () => {
       describe("when there's only one operation to do", () => {
-        it(`[${calc1.nums}], [${calc1.ops}] -> ${calc1.result}`, () => {
-          expect(wordCalculator(calc1.nums, calc1.ops)).to.equal(calc1.result);
-        });
-
-        it(`[${calc2.nums}], [${calc2.ops}] -> ${calc2.result}`, () => {
-          expect(wordCalculator(calc2.nums, calc2.ops)).to.equal(calc2.result);
-        });
-
-        it(`[${calc3.nums}], [${calc3.ops}] -> ${calc3.result}`, () => {
-          expect(wordCalculator(calc3.nums, calc3.ops)).to.equal(calc3.result);
+        const oneOp = calcData.slice(0, 3);
+        oneOp.forEach(({ nums, ops, result }) => {
+          it(`[${nums}], [${ops}] -> ${result}`, () => {
+            expect(wordCalculator(nums, ops)).to.equal(result);
+          });
         });
       });
 
       describe("when there are two or more operations to do", () => {
-        it(`[${calc4.nums}], [${calc4.ops}] -> ${calc4.result}`, () => {
-          expect(wordCalculator(calc4.nums, calc4.ops)).to.equal(calc4.result);
+        const multiOp = calcData.slice(3);
+        multiOp.forEach(({ nums, ops, result }) => {
+          it(`[${nums}], [${ops}] -> ${result}`, () => {
+            expect(wordCalculator(nums, ops)).to.equal(result);
+          });
         });
-
-        it(`[${calc5.nums}], [${calc5.ops}] -> ${calc5.result}`, () => {
-          expect(wordCalculator(calc5.nums, calc5.ops)).to.equal(calc5.result);
-        });
-
-        it(`[${calc6.nums}], [${calc6.ops}] -> ${calc6.result}`, () => {
-          expect(wordCalculator(calc6.nums, calc6.ops)).to.equal(calc6.result);
-        });
-
-        it(`[${calc7.nums}], [${calc7.ops}] -> ${calc7.result}`, () => {
-          expect(wordCalculator(calc7.nums, calc7.ops)).to.equal(calc7.result);
-        });
-
-        // multiple.forEach(({ nums, ops, result }) => {
-        //   it(`[${nums}], [${ops}] -> ${result}`, () => {
-        //     expect(wordCalculator(nums, ops)).to.equal(result);
-        //   });
-        // });
       });
     });
   });
