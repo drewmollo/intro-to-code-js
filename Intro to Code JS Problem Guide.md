@@ -33,6 +33,9 @@
     - [#: disemvoweler](#-disemvoweler)
     - [#: valueLocator](#-valuelocator)
     - [#: uniquesOnly](#-uniquesonly)
+    - [#: switchomatic](#-switchomatic)
+    - [#: pairMultiplier](#-pairmultiplier)
+    - [#: wordCalculator](#-wordcalculator)
 
 ## 01 - Values and Data Types
 
@@ -302,3 +305,35 @@ Challenge:
 - [ ] Sets if-statement using `indexOf`
   - [ ] Pushes `currChar` to uniques array
 - [ ] Returns uniques array
+
+### #: switchomatic
+
+- [ ] Names the function correctly
+- [ ] Names inputs appropriately
+- [ ] Sets output array; reverse boolean in outer scope
+- [ ] Set up loop over array
+- [ ] Set up if, else-if, else conditionals
+  - [ ] Handle `unshift`
+  - [ ] Handle direction flip
+  - [ ] Handle `push`
+- [ ] Return output array
+
+### #: pairMultiplier
+
+- [ ] Names the function correctly
+- [ ] Names inputs appropriately
+- [ ] Sets up array to store number products
+- [ ] Set up nested loops; one for each array
+  - [ ] Grab both current values inside nested loop
+  - [ ] Multiply both values; push result to products array
+- [ ] Return products array
+
+### #: wordCalculator
+
+- [ ] Names the function correctly
+- [ ] Names inputs appropriately
+- [ ] Sets up base value of 0
+- [ ] Uses one loop for both arrays
+  - [ ] Uses same pointer to grab current values in each array
+- [ ] Sets up conditional for each operation
+- [ ] Returns result after loop complete

@@ -194,7 +194,6 @@ function pairMultiplier(arr1, arr2) {
     for (let j = 0; j < arr2.length; j++) {
       const numOne = arr1[i];
       const numTwo = arr2[j];
-      // console.log(numOne, numTwo);
       productsArr.push(numOne * numTwo);
     }
   }
@@ -246,7 +245,6 @@ function wordCalculator(nums, operations) {
  * 3. Type `npm run test-04` in the Shell and hit Enter.
  */
 import { expect } from "chai";
-import { describe } from "mocha";
 
 describe("04 - Arrays and Loops", () => {
   describe("#1: measurer", () => {

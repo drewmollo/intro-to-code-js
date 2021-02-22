@@ -1,3 +1,5 @@
+### Version 1.4.1
+
 ### Version 1.0.0
 - feat(01-Values): add #4 Quickest Math Class answers
 - feat(01-Values): add #4: Quickest Math Class test code; remove answers
