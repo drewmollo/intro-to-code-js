@@ -14,12 +14,7 @@
  * Can you write this function as a one-liner? Remember to comment out the original function before testing your one-line version to avoid duplicate declaration errors!
  */
 
-function measurer(arr) {
-  return arr.length;
-}
-
-// One-line function
-// const measurer = (arr) => arr.length;
+// Replace this comment with your code.
 
 /**********************************
  * #2: indexer
@@ -38,112 +33,37 @@ function measurer(arr) {
  * Can you write this function as a one-liner? Remember to comment out the original function before testing your one-line version to avoid duplicate declaration errors!
  */
 
-function indexer(arr, index) {
-  if (index !== undefined) {
-    return arr[index];
-  }
-  return arr[0];
-}
-
-// One-line function
-// const indexer = (arr, index) => (index !== undefined ? arr[index] : arr[0]);
-
 /**********************************
  * #: frontOrBack
  */
 
-function frontOrBack(array, place, action, value) {
-  if (place === "front") {
-    if (action === "add") {
-      array.unshift(value);
-      return array;
-    } else {
-      array.shift();
-      return array;
-    }
-  } else {
-    if (action === "add") {
-      array.push(value);
-      return array;
-    } else {
-      array.pop();
-      return array;
-    }
-  }
-}
+// Replace this comment with your code.
 
 /**********************************
  * #: repeater
  */
 
-function repeater(string, times) {
-  let repeatedStr = "";
-
-  for (let i = 1; i <= times; i++) {
-    repeatedStr += string;
-  }
-
-  return repeatedStr;
-}
+// Replace this comment with your code.
 
 /**********************************
  * #: disemvoweler
  */
 const vowels = ["a", "e", "i", "o", "u"];
 
-function disemvoweler(string) {
-  let noVowelStr = "";
-
-  for (let i = 0; i < string.length; i++) {
-    for (let j = 0; j < vowels.length; j++) {
-      const currChar = string[i];
-      const currVowel = vowels[j];
-
-      if (currChar === currVowel) {
-        break;
-      } else if (currChar !== currVowel && j === vowels.length - 1) {
-        noVowelStr += currChar;
-      }
-    }
-  }
-  return noVowelStr;
-}
+// Replace this comment with your code.
 
 /**********************************
  * #: valueLocator
  */
 
-function valueLocator(searchValue, arr) {
-  const idx = arr.indexOf(searchValue);
-  if (idx !== -1) {
-    return `${searchValue} is at index ${idx} of the array ${arr}.`;
-  }
-  return `${searchValue} cannot be found in the array ${arr}.`;
-}
-
-// One-liner
-// const valueLocator = (searchValue, arr) =>
-//   arr.indexOf(searchValue) !== -1
-//     ? `${searchValue} is at index ${idx} of the array ${arr}.`
-//     : `${searchValue} cannot be found in the array ${arr}.`;
+// Replace this comment with your code.
 
 /**********************************
  * #: uniquesOnly
  *
  */
 
-function uniqueCharsOnly(string) {
-  let uniques = [];
-
-  for (let i = 0; i < string.length; i++) {
-    const currChar = string[i];
-
-    if (uniques.indexOf(currChar) === -1) {
-      uniques.push(currChar);
-    }
-  }
-  return uniques;
-}
+// Replace this comment with your code.
 
 /**********************************
  * #: switchomatic
@@ -163,23 +83,7 @@ function uniqueCharsOnly(string) {
  * reversomatic([true, false, 1, 2]) => [true, false, 1, 2]
  */
 
-function switchomatic(array) {
-  let output = [];
-  let reverse = false;
-
-  for (let i = 0; i < array.length; i++) {
-    const currValue = array[i];
-
-    if (reverse) {
-      output.unshift(currValue);
-    } else if (currValue === "reverse") {
-      reverse = true;
-    } else {
-      output.push(currValue);
-    }
-  }
-  return output;
-}
+// Replace this comment with your code.
 
 /**********************************
  * #: pairMultiplier
@@ -187,18 +91,7 @@ function switchomatic(array) {
  * The nums and ops arrays will always be the same size, .length > 1
  */
 
-function pairMultiplier(arr1, arr2) {
-  let productsArr = [];
-
-  for (let i = 0; i < arr1.length; i++) {
-    for (let j = 0; j < arr2.length; j++) {
-      const numOne = arr1[i];
-      const numTwo = arr2[j];
-      productsArr.push(numOne * numTwo);
-    }
-  }
-  return productsArr;
-}
+// Replace this comment with your code.
 
 /**********************************
  * #: wordCalculator
@@ -206,35 +99,7 @@ function pairMultiplier(arr1, arr2) {
  * The nums and ops arrays will always be the same size, .length > 1
  */
 
-// One-loop version
-function wordCalculator(nums, operations) {
-  let result = 0;
-
-  // Both input arrays are the same size
-  // Use the i pointer from the loop to grab current entry per iteration
-  for (let i = 0; i < nums.length; i++) {
-    const currNum = nums[i];
-    const currOp = operations[i];
-
-    switch (currOp) {
-      case "add":
-        result += currNum;
-        break;
-      case "sub":
-        result -= currNum;
-        break;
-      case "mult":
-        result *= currNum;
-        break;
-      case "div":
-        result /= currNum;
-        break;
-      default:
-        break;
-    }
-  }
-  return result;
-}
+// Replace this comment with your code.
 
 /**
  * The code below is what tests your answers.
